@@ -7,13 +7,16 @@
  */
 void selection_sort(int *r, size_t size)
 {
-	unsigned int i, j, min;
-	int tmp;
+	unsigned int i, j;
+	int tmp, min;
 
+	if (!r)
+		return;
 	for (i = 0; i < size; i++)
 	{
+		min = i;
 		for (j = i + 1; j <= size; j++)
-			if (r[i] > r[j])
+			if (r[min] > r[j])
 				min = j;
 		if (r[i] > r[min])
 			tmp = r[i], r[i] = r[min], r[min] = tmp, print_array(r, size);
