@@ -10,7 +10,7 @@ void selection_sort(int *r, size_t size)
 	unsigned int i, j;
 	int tmp, min;
 
-	if (!r || !size)
+	if (!r)
 		return;
 	for (i = 0; i < size; i++)
 	{
