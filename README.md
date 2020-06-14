@@ -11,8 +11,10 @@ Read or watch:
 * What is the Big O notation, and how to evaluate the time complexity of an algorithm
 * How to select the best sorting algorithm for a given input
 * What is a stable sorting algorithm
----#### [Sorting algorithms & Big O](https://intranet.hbtn.io/projects/248#task-1326)
-For further information, click on the previous link.## PrerequisitesFor further installation is necessary to set this program on Ubuntu 14.04 LTS using Vagrant in VirtualBox.You need to install this software
+---
+#### [Sorting algorithms & Big O](https://intranet.hbtn.io/projects/248#task-1326)
+For further information, click on the previous link.
+## PrerequisitesFor further installation is necessary to set this program on Ubuntu 14.04 LTS using Vagrant in VirtualBox.You need to install this software
 ```
 1. VirtualBox - Virtual Machine
 2. Vagrant
@@ -26,8 +28,7 @@ Follow the following instructions to get a copy of the program and run in your l
  > `https://github.com/samisosa20/sorting_algorithms.git`- Compile it with GCC
  > `gcc -Wall -Werror -Wextra -pedantic *.c -g -o executable_name`- Run the program
  > `./executable_name` - Run with debugger
- > `valgrind --leak-check=full --show-leak-kinds=all ./executable_name`## Built with...- Visual Studio Code - Coding and structuring.
-- Clion - Debugging and testing outcomes.
+ > `valgrind --leak-check=full --show-leak-kinds=all ./executable_name`
 ---
 ### [0. Bubble sort](./0-bubble_sort.c)
 * Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
