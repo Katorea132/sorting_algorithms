@@ -10,12 +10,12 @@ void selection_sort(int *r, size_t size)
 	unsigned int i, j;
 	int tmp, min;
 
-	if (!r)
+	if (!r || !size)
 		return;
 	for (i = 0; i < size; i++)
 	{
 		min = i;
-		for (j = i + 1; j <= size; j++)
+		for (j = i + 1; j < size; j++)
 			if (r[min] > r[j])
 				min = j;
 		if (r[i] > r[min])
