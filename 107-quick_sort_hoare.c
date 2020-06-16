@@ -11,19 +11,15 @@ int NotThatQuick(int *r, int size, int low, int high)
 {
 	int i, j, swappy, pivot;
 
-	for (pivot = r[high], i = low - 1, j = high + 1; i < size;)
+	for (pivot = r[high], i = low - 1, j = high + 1; i < j;)
 	{
 		for (; r[++i] < pivot;)
 			;
 		for (; r[--j] > pivot;)
 			;
 		if (i < j)
-		{
 			if (r[i] != r[j])
 				swappy = r[i], r[i] = r[j], r[j] = swappy, print_array(r, size);
-		}
-		else
-			break;
 	}
 	return (i);
 }
@@ -54,6 +50,6 @@ void Quick(int *r, int size, int low, int high)
  */
 void quick_sort_hoare(int *array, size_t size)
 {
-	if (array && size > 1)
+	if (array)
 		Quick(array, size, 0, size - 1);
 }
