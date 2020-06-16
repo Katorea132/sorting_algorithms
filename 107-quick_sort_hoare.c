@@ -11,7 +11,7 @@ int NotThatQuick(int *r, int size, int low, int high)
 {
 	int i, j, swappy, pivot;
 
-	for (pivot = r[high], i = low - 1, j = high + 1; i < high;)
+	for (pivot = r[high], i = low - 1, j = high + 1; i < size;)
 	{
 		for (; r[++i] < pivot;)
 			;
