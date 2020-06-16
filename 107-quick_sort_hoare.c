@@ -18,8 +18,7 @@ int NotThatQuick(int *r, int size, int low, int high)
 		for (; r[--j] > pivot;)
 			;
 		if (i < j)
-			if (r[i] != r[j])
-				swappy = r[i], r[i] = r[j], r[j] = swappy, print_array(r, size);
+			swappy = r[i], r[i] = r[j], r[j] = swappy, print_array(r, size);
 	}
 	return (i);
 }
