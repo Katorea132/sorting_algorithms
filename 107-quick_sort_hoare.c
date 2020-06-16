@@ -9,9 +9,9 @@
  */
 int NotThatQuick(int *r, int size, int low, int high)
 {
-	int i, j, swappy, pivot;
+	int i, j, swappy, pivot, sizhol = size;
 
-	for (pivot = r[high], i = low - 1, j = high + 1; i < size;)
+	for (pivot = r[high], i = low - 1, j = high + 1; i < sizhol;)
 	{
 		for (; r[++i] < pivot;)
 			;
