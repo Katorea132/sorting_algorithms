@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * NotThatQuickTho
+ * NotThatQuickThough - asd
  * @r: Array
  * @size: Size
  * @low: Low limit
@@ -11,7 +11,7 @@ int NotThatQuickThough(int *r, int size, int low, int high)
 {
 	int i, j, swappy, pivot;
 
-	for (pivot = r[high], i = low - 1, j = high + 1; i < size;)	
+	for (pivot = r[high], i = low - 1, j = high + 1; i < size;)
 	{
 		for (; r[++i] < pivot;)
 			;
@@ -20,7 +20,7 @@ int NotThatQuickThough(int *r, int size, int low, int high)
 		if (i < j)
 		{
 			if (r[i] != r[j])
-				swappy = r[i], r[i] = r[j], r[j] = swappy,print_array(r, size);
+				swappy = r[i], r[i] = r[j], r[j] = swappy, print_array(r, size);
 		}
 		else
 			break;
@@ -28,7 +28,7 @@ int NotThatQuickThough(int *r, int size, int low, int high)
 	return (i);
 }
 /**
- * Quickboi - Handles the quicksort algorithm rythm
+ * Quickboye - Handles the quicksort algorithm rythm
  * @r: Array
  * @size: Size
  * @low: Low limit
@@ -37,7 +37,8 @@ int NotThatQuickThough(int *r, int size, int low, int high)
  */
 void Quickboye(int *r, int size, int low, int high)
 {
-	int partition;	
+	int partition;
+
 	if (low < high)
 	{
 		partition = NotThatQuickThough(r, size, low, high);
@@ -50,7 +51,7 @@ void Quickboye(int *r, int size, int low, int high)
  * @array: Holds the array
  * @size: Size of the array
  * Return: None
- */ 
+ */
 void quick_sort_hoare(int *array, size_t size)
 {
 	if (array)
