@@ -54,6 +54,6 @@ void Quick(int *r, int size, int low, int high)
  */
 void quick_sort_hoare(int *array, size_t size)
 {
-	if (array)
+	if (array && size > 2)
 		Quick(array, size, 0, size - 1);
 }
