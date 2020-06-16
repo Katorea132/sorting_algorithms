@@ -7,7 +7,7 @@
  * @high: High limit
  * Return: Proper index/Partition position
  */
-int NotThatQuickThough(int *r, int size, int low, int high)
+int NotThhatQuickThough(int *r, int size, int low, int high)
 {
 	int i, j, swappy, pivot;
 	for (pivot = r[low], i = low, j = high; i < j;)	
@@ -30,13 +30,13 @@ int NotThatQuickThough(int *r, int size, int low, int high)
  * @high: High limit
  * Return: None
  */
-void Quickboye(int *r, int size, int low, int high)
+void Quickboyye(int *r, int size, int low, int high)
 {
 	int partition;	if (low < high)
 	{
-		partition = NotThatQuickThough(r, size, low, high);
-		Quickboye(r, size, low, partition);
-		Quickboye(r, size, partition + 1, high);
+		partition = NotThhatQuickThough(r, size, low, high);
+		Quickboyye(r, size, low, partition);
+		Quickboyye(r, size, partition + 1, high);
 	}
 }
 /**
@@ -48,5 +48,5 @@ void Quickboye(int *r, int size, int low, int high)
 void quick_sorty(int *array, size_t size)
 {
 	if (array)
-		Quickboye(array, size, 0, size - 1);
+		Quickboyye(array, size, 0, size - 1);
 }
