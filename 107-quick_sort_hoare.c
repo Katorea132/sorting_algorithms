@@ -1,13 +1,13 @@
 #include "sort.h"
 /**
- * NotThatQuickThough - asd
+ * NotThatQuick - asd
  * @r: Array
  * @size: Size
  * @low: Low limit
  * @high: High limit
  * Return: Proper index/Partition position
  */
-int NotThatQuickThough(int *r, int size, int low, int high)
+int NotThatQuick(int *r, int size, int low, int high)
 {
 	int i, j, swappy, pivot;
 
@@ -28,22 +28,22 @@ int NotThatQuickThough(int *r, int size, int low, int high)
 	return (i);
 }
 /**
- * Quickboye - Handles the quicksort algorithm rythm
+ * Quick - Handles the quicksort algorithm rythm
  * @r: Array
  * @size: Size
  * @low: Low limit
  * @high: High limit
  * Return: None
  */
-void Quickboye(int *r, int size, int low, int high)
+void Quick(int *r, int size, int low, int high)
 {
 	int partition;
 
 	if (low < high)
 	{
-		partition = NotThatQuickThough(r, size, low, high);
-		Quickboye(r, size, low, partition - 1);
-		Quickboye(r, size, partition, high);
+		partition = NotThatQuick(r, size, low, high);
+		Quick(r, size, low, partition - 1);
+		Quick(r, size, partition, high);
 	}
 }
 /**
@@ -55,5 +55,5 @@ void Quickboye(int *r, int size, int low, int high)
 void quick_sort_hoare(int *array, size_t size)
 {
 	if (array)
-		Quickboye(array, size, 0, size - 1);
+		Quick(array, size, 0, size - 1);
 }
